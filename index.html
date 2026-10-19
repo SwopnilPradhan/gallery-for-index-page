@@ -14,7 +14,7 @@
 }
 
 body{
-    background: #eaeaea; /* Soft dark gray / light black */
+    background-color: #1e1e1e; /* Soft dark gray / light black */
       color: #ffffff;
     overflow: hidden;
 }
@@ -26,8 +26,7 @@ body{
     transform: translate(-50%, -50%);
     width: 1000px;
     height: 600px;
-    background: #f5f5f5;
-    box-shadow: 0 30px 50px #dbdbdb;
+    box-shadow: 0 30px 50px ;
 }
 
 .container .slide .item{
@@ -37,7 +36,7 @@ body{
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 20px;
-    box-shadow: 0 30px 50px #505050;
+    box-shadow: 0 30px 50px;
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
@@ -249,17 +248,17 @@ body{
       </div>
     </div>
     <script id="rendered-js">
-      let next = document.querySelector(&#39;.next&#39;)
-let prev = document.querySelector(&#39;.prev&#39;)
+      let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
 
-next.addEventListener(&#39;click&#39;, function(){
-    let items = document.querySelectorAll(&#39;.item&#39;)
-    document.querySelector(&#39;.slide&#39;).appendChild(items[0])
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
 })
 
-prev.addEventListener(&#39;click&#39;, function(){
-    let items = document.querySelectorAll(&#39;.item&#39;)
-    document.querySelector(&#39;.slide&#39;).prepend(items[items.length - 1]) // here the length of items = 6
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
 })
     </script>
   </body>
