@@ -152,11 +152,57 @@ body{
     background: #ababab;
     color: #fff;
 }
+      .gallery-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  /* If you want it centered in the whole viewport use min-height:100vh;
+     otherwise set a specific height or remove this line to center within an existing container */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.gallery-title {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+
+  /* gradient text */
+  background: linear-gradient(90deg, #ff7a18, #af002d, #6a11cb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* subtle glow */
+  text-shadow:
+    0 6px 20px rgba(106,17,203,0.12),
+    0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* optional subtitle */
+.gallery-subtitle {
+  margin-top: 0.6rem;
+  color: rgba(255,255,255,0.72);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
     </style>
   </head>
   <body>
     <!--Font Awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <div class="gallery-header" role="banner" aria-label="Swopnil's Gallery">
+  <h1 class="gallery-title">Swopnil's Gallery</h1>
+  <!-- optional subtitle -->
+  <div class="gallery-subtitle">A curated collection</div>
+   </div>
     <div class="container">
       <div class="slide">
         <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
